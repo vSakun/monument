@@ -7,29 +7,61 @@ body{
 }
 header{
 	width: 100%;
-	position: relative;
+	position: absolute;
+	background-color: rgba(249,246,246,.7);
+	left: 0px;
+	top: 0px;
+	z-index: 1;
 }
 header p{
 	font-family: "BigNoodleTitlingCyr";
 	font-size: 3.33rem;
 	margin: 40px 0 40px 0;
 }
-h1{
+h1,h2,h3,h4,h5,h6{
 	font-family: "BigNoodleTitlingCyr";
-	font-size: 5rem;
+}
+section{}
+/* Заглавная секция */
+.title h1{
+	font-family: "BigNoodleTitlingCyr";
+	font-size: 4rem;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color: #D7D6D6;
-	text-align: center;
 }
 #bord{
 	position: relative;
-	background-image: url(../images/parallax1.jpg);
-	-webkit-background-size: cover;
-	background-size: cover;
 	min-height: 200px;
 }
-.title{
-	width: 100%;
+#bord span{
+	font-family: "BigNoodleTitlingCyr";
+	text-transform: uppercase;
+	font-size: 3rem;
+	color: #D7D6D6;
+}
+#bord .container, #bord .row, #bord .col-md-12{
 	height: 100%;
+}
+.title{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+	text-align: center;
+	top: 50%;
+}
+/* Скуция о нас */
+.titleSection{
+	text-align: center;
+	height: auto;
+}
+.titleSection h2{
+	font-size: 3rem;
+}
+.titleSection p{
+	font-size: 1.3rem;
+	font-family: "RobotoThin";
+	max-width: 500px;
+	margin: auto;
 }

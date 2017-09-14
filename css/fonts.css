@@ -4,3 +4,9 @@
 	font-style: normal;
 	font-weight: normal;
 }
+@font-face {
+	font-family: "RobotoThin";
+	src: url("../font/RobotoThin.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
