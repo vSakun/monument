@@ -10,3 +10,9 @@
 	font-style: normal;
 	font-weight: normal;
 }
+@font-face {
+	font-family: "RobotoCon";
+	src: url("../font/RobotoCondensed.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

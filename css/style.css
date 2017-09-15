@@ -20,6 +20,10 @@ header p{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: "BigNoodleTitlingCyr";
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0;
+	padding: 0;
 }
 section{}
 /* Заглавная секция */
@@ -55,13 +59,117 @@ section{}
 .titleSection{
 	text-align: center;
 	height: auto;
+	padding: 4% 0 4% 0;
 }
 .titleSection h2{
 	font-size: 3rem;
 }
 .titleSection p{
-	font-size: 1.3rem;
+	font-size: 1.7rem;
 	font-family: "RobotoThin";
+	font-weight: 900;
 	max-width: 500px;
 	margin: auto;
+	color: #8F8383;
+}
+#aboutUs .blokInf{
+	position: relative;
+	min-height: 150px;
+	background-color: rgba(235, 235, 235, .7);
+	text-align: center;
+}
+#aboutUs .blokInf i{
+	font-size: 5rem;
+	color: #F15324;
+	padding-top: 5%;
+}
+#aboutUs .blokInf p{
+	padding: 0 5%;
+	font-family: "RobotoThin";
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+#aboutUs .blokInf h3{
+	color: #7A6E6E;
+	letter-spacing: 2px;
+}
+/* Продукция */
+#production .mnuProd li{
+	display: inline-block;
+	list-style: none;
+	margin: 0 3%;
+	padding: .2%;
+	font-family: "RobotoCon";
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	position: relative;
+	transition: color .5s, font .5s;
+}
+#production .mnuProd .activMnu{
+	font-size: 1.6rem;
+	color: #F15324;
+	transition: color .5s, font .5s;
+}
+#production .mnuProd .activMnu::after{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 1px;
+	bottom: 0;
+	right: 50%;
+	width: 50%;
+}
+#production .mnuProd .activMnu::before{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 1px;
+	bottom: 0;
+	left: 50%;
+	width: 50%;
+}
+#production .mnuProd li::after{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 1px;
+	width: 0;
+	bottom: 0;
+	right: 50%;
+}
+#production .mnuProd li::before{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 1px;
+	width: 0;
+	bottom: 0;
+	left: 50%;
+}
+#production .mnuProd li:hover::after{
+	width: 50%;
+	transition: width .5s;
+}
+#production .mnuProd li:hover::before{
+	width: 50%;
+	transition: width .5s;
+}
+#production .mnuProd{
+	margin: auto;
+	padding: 0;
+	text-align: center;
+}
+.listProd .col-md-3, .listProd .col-xs-3{
+	margin: 0;
+	padding: 0;
+}
+.itemProd img{
+	width: 100%;
+	height: 100%;
 }
