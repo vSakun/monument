@@ -165,8 +165,9 @@ section{}
 	padding: 0;
 	text-align: center;
 }
-.listProd{
+#production .listProd{
 	padding: 2% 0;
+	margin: 0;
 }
 .listProd .itemProd{
 	opacity: 1;
