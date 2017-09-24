@@ -13,10 +13,12 @@ header{
 	top: 0px;
 	z-index: 1;
 }
-header p{
+header p, footer p{
 	font-family: "BigNoodleTitlingCyr";
 	font-size: 3.33rem;
-	margin: 40px 0 40px 0;
+	margin: 0;
+	padding: 0;
+	line-height: 15vh;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: "BigNoodleTitlingCyr";
@@ -25,7 +27,9 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0;
 	padding: 0;
 }
-section{}
+section{
+	padding: 2% 0;
+}
 /* Заглавная секция */
 .title h1{
 	font-family: "BigNoodleTitlingCyr";
@@ -37,6 +41,85 @@ section{}
 #bord{
 	position: relative;
 	min-height: 200px;
+}
+.mnuTop{
+	height: 15vh;
+}
+.contact{
+	width: 100%;
+}
+.contact span{
+	display: inline-block;
+	font-family: "BigNoodleTitlingCyr";
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+	line-height: 15vh;
+}
+.contact i{
+	font-size: 2.7rem;
+	margin: 0 1% 0 3%;
+	color: #F15324;
+}
+.tel{
+	float: left;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+}
+.mailE{
+	float: right;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+}
+.downPrice{
+	text-align: center;
+}
+.downPrice a{
+	display: block;
+	font-family: "BigNoodleTitlingCyr";
+	line-height: 15vh;
+	text-transform: uppercase;
+	color: #F15324;
+	letter-spacing: 2px;
+	font-size: 2.5rem;
+	height: 15vh;
+}
+.downPrice i{
+	margin: 0 2% 0 0;
+	font-size: 3rem;
+}
+.downPrice a:hover{
+	text-decoration: none;
+	color: #F15324;
+}
+.downPrice a::after{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	right: 50%;
+}
+.downPrice a::before{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	left: 50%;
+}
+.downPrice a:hover::after{
+	width: 35%;
+	transition: width .5s;
+}
+.downPrice a:hover::before{
+	width: 35%;
+	transition: width .5s;
 }
 #bord span{
 	font-family: "BigNoodleTitlingCyr";
@@ -59,7 +142,7 @@ section{}
 .titleSection{
 	text-align: center;
 	height: auto;
-	padding: 4% 0 4% 0;
+	padding: 2% 0 4% 0;
 }
 .titleSection h2{
 	font-size: 3rem;
@@ -72,16 +155,48 @@ section{}
 	margin: auto;
 	color: #8F8383;
 }
+.line{
+	position: relative;
+	width: 100%;
+	margin: .5% 0;
+}
+.circle{
+	position: relative;
+	margin: 0 auto;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: 2px solid #F15324;
+}
+.circle::before{
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 15px;
+	width: 100px;
+	height: 2px;
+	background-color: #F15324;
+}
+.circle::after{
+	content: "";
+	position: absolute;
+	top: 4px;
+	right: 15px;
+	width: 100px;
+	height: 2px;
+	background-color: #F15324;
+}
 #aboutUs .blokInf{
 	position: relative;
 	min-height: 150px;
 	background-color: rgba(235, 235, 235, .7);
 	text-align: center;
+	padding: 5% 0;
+	margin-bottom: 2%;
 }
 #aboutUs .blokInf i{
 	font-size: 5rem;
 	color: #F15324;
-	padding-top: 5%;
 }
 #aboutUs .blokInf p{
 	padding: 0 5%;
@@ -248,4 +363,135 @@ section{}
 .more:hover::before{
 	width: 50%;
 	transition: width .5s;
+}
+/* Секция примеры работ */
+#exampl{
+	background-color: #1C1C1C;
+	width: 100%;
+}
+#exampl .rowSlide,#exampl .slide,#exampl .slideList{
+	margin: 0;
+	padding: 0;
+}
+.slide img{
+	width: 100%;
+}
+.prev, .next{
+	margin: 0;
+	padding: 0;
+}
+/* Секция сравнения */
+#comparison{
+
+}
+.varP{
+	position: relative;
+	width: 100%;
+	margin: 0 auto 2% auto;
+	background-color: rgba(235, 235, 235, .7);
+	text-align: center;
+	border: 1px solid transparent;
+	transition: box-shadow .5s, border .5s;
+}
+.wrapVarP{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(243, 235, 235, .9);
+	z-index: 1;
+	opacity: 0;
+	transition: opacity .5s;
+}
+.varP:hover{
+	box-shadow: 0px 0px 5px 0px rgba(241,83,36, .9);
+	border: 1px solid #F15324;
+	transition: box-shadow .5s, border .5s;
+}
+.varP:hover .wrapVarP{
+	opacity: 1;
+	transition: opacity .5s;
+}
+.varP h4{
+	position: absolute;
+	width: 100%;
+	font-size: 2rem;
+	background-color: rgba(243, 235, 235, .9);
+}
+.varP img{
+	width: 100%;
+}
+.wrapVarP .more{
+	font-size: 2.3rem;
+	top: calc(50% - 20px);
+	text-align: center;
+	font-family: "BigNoodleTitlingCyr";
+	font-weight: 900;
+	margin: 0 auto;
+}
+.opisBlok{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(243, 235, 235, .9);
+	text-align: justify;
+	padding: 2% 5%;
+}
+.opisBlok p{
+	font-family: "RobotoCon";
+	font-weight: 900;
+	font-size: 1.5rem;
+	margin: 0;
+}
+.opisBlok span{
+	font-family: "BigNoodleTitlingCyr";
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #7A6E6E;
+}
+/* Секция контакт */
+#conect label{
+	display: block;
+	width: 100%;
+	color: #696969;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: "RobotoCon";
+	font-weight: 900;
+	font-size: 1.6rem; 
+}
+#conect input{
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin: 2% 0;
+	border:none;
+	border-bottom: 2px solid #CACACA;
+}
+#conect .subBot{
+	font-family: "BigNoodleTitlingCyr";
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 2.5rem;
+	letter-spacing: 2.5px;
+	color: #ffffff;
+	margin: 0 auto;
+	width: 15%;
+	border: 1px solid transparent;
+	background-color: #F6744B;
+	transition: color .5s, background .5s, border .5s;
+}
+#conect .subBot:hover{
+	color: #F6744B;
+	background-color: #ffffff;
+	transition: color .5s, background .5s, border .5s;
+	border: 1px solid #F6744B;
+}
+/* footer */
+footer{
+	width: 100%;
+	background-color: #171F23;
 }
