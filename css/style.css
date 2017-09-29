@@ -490,8 +490,39 @@ section{
 	transition: color .5s, background .5s, border .5s;
 	border: 1px solid #F6744B;
 }
+/* map */
+#map{
+	margin: 0;
+	padding: 0;
+}
+#google-map{
+	position: relative;
+	height:500px;
+}
+#google-container{
+	height:500px;
+}
+.gmnoprint, .gm-style-cc{
+	visibility: hidden;
+}
+.descrAddress{
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -140px;
+	font-size: 2.5rem;
+	width: 280px;
+	color: #F6744B;
+	font-family: "BigNoodleTitlingCyr";
+	font-weight: 500;
+	letter-spacing: 2px;
+}
 /* footer */
 footer{
 	width: 100%;
 	background-color: #171F23;
+}
+footer p{
+	font-weight: 900;
+	letter-spacing: 1px;
 }
