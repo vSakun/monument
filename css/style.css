@@ -320,7 +320,7 @@ section{
 	color: #696969;
 	font-size: 1.7rem;
 	letter-spacing: 1px;
-	font-family: "RobotoCon";
+	font-family: "BigNoodleTitlingCyr";
 	font-weight: 900;
 	margin-top: 40%;
 }
@@ -356,14 +356,6 @@ section{
 	bottom: 0;
 	left: 50%;
 }
-.more:hover::after{
-	width: 50%;
-	transition: width .5s;
-}
-.more:hover::before{
-	width: 50%;
-	transition: width .5s;
-}
 /* Секция примеры работ */
 #exampl{
 	background-color: #1C1C1C;
@@ -377,8 +369,17 @@ section{
 	width: 100%;
 }
 .prev, .next{
+	display: block;
 	margin: 0;
 	padding: 0;
+	color: #F15324;
+	top: 50%;
+}
+.prev i, .next i{
+	margin: 0;
+	padding: 0;
+	color: #F15324;
+	font-size: 6rem;
 }
 /* Секция сравнения */
 #comparison{
@@ -412,6 +413,14 @@ section{
 .varP:hover .wrapVarP{
 	opacity: 1;
 	transition: opacity .5s;
+}
+.varP:hover .more::after{
+	width: 50%;
+	transition: width .5s;
+}
+.varP:hover .more::before{
+	width: 50%;
+	transition: width .5s;
 }
 .varP h4{
 	position: absolute;
@@ -451,6 +460,101 @@ section{
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #7A6E6E;
+}
+
+
+.popup{
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(50, 50, 50, .9);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup .fa-times{
+	position: absolute;
+	color: #ffffff;
+	top: 5%;
+	right: 5%;
+	font-size: 2em;
+	cursor: pointer;
+	transition: font .2s;
+	text-shadow: 1px 1px 2px #000000;
+}
+.popup .fa-times:hover{
+	font-size: 2.2em;
+	transition: font .2s;
+}
+.description{
+	display: none;
+}
+.popup .description{
+	display: block;
+	width: 100%;
+}
+.description span{
+	text-transform: uppercase;
+	font-family: "BigNoodleTitlingCyr";
+	font-size: 2rem;
+	font-weight: 900;
+	letter-spacing: 1px;
+	color: rgb(109, 110, 113);
+}
+.popup img{
+	width: 30%;
+	float: left;
+	padding: 0 1% 2% 2%;
+}
+.popup .bgcWrap{
+	position: relative;
+	border: none;	
+	opacity: 1;
+	background-color: transparent;
+}
+.popup .bgcWrap span{
+	display: none;
+}
+.popup .wrapProdImg{
+	background-color: rgba(243, 235, 235, .9);
+}
+.popup .wrapProdImg .more{
+	display: none;
+}
+.wrapProdImg:hover .more::after{
+	width: 50%;
+	transition: width .5s;
+}
+.wrapProdImg:hover .more::before{
+	width: 50%;
+	transition: width .5s;
+}
+.popup .wrapProdImg img{
+	width: 50%;
+	padding-top: 2%;
+}
+.popup .wrapVarP{
+	display: none;
+}
+.popup .opisBlok{
+	position: relative;
+	background-color: transparent;
+}
+.popup h4{
+	position: relative;
+	background-color: transparent;
+	font-size: 2.3rem;
+}
+.popup .varP{
+	background-color: rgba(243, 235, 235, .9);
+	width: 90%;
+}
+.popup .varP:hover{
+	box-shadow: none;
+	border: 1px solid transparent;
 }
 /* Секция контакт */
 #conect label{

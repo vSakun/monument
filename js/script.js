@@ -97,3 +97,28 @@ function sort(){
 	});
 }
 sort();
+/*Функция POPUP. На блок который надо увеличивать необходимо установить name="box"*/
+function popup(){
+	$(".box").on('click', function(){
+		var copy = $(this).clone();
+		console.log($(this).parent().append('<div class="popup"></div>'));
+		$(copy).appendTo(".popup");
+		$(".popup").append('<i class="fa fa-times"></i>');
+		$(document).mouseup(function (e){ // событие клика по веб-документу
+			var div = $(".box");
+			var cl = $(".popup i[class=fa-times]"); // тут указываем ID элемента
+			if (!div.is(e.target) && div.has(e.target).length === 0){ // и не по его дочерним элементам
+				$("div.popup").remove(); // скрываем его
+			}
+			if(cl.is(e.target) && cl.has(e.target).length ===0){
+				$("div.popup").remove();
+			}
+		});
+	});
+	$(document).bind('keydown', function(eventObject){
+		if(eventObject.keyCode == 27){
+			$("div.popup").remove();
+		}
+	});
+}
+popup();
