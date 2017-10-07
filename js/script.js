@@ -122,3 +122,27 @@ function popup(){
 	});
 }
 popup();
+/* Слайдер */
+function Slider(){
+	$(".next").on('click', function(){
+		$(".opas:first").removeClass("opas").addClass("opasN");
+		setTimeout(function (){
+					$(".vis:first").removeClass("vis").addClass("hid");
+					$(".hid:last").removeClass("hid").addClass("vis");
+				}, 500);
+		setTimeout(function (){
+					$(".opasN:last").removeClass("opasN").addClass("opas");
+				}, 550);
+	});
+	$(".prev").on('click', function(){
+		$(".opas:last").removeClass("opas").addClass("opasN");
+		setTimeout(function (){
+					$(".vis:last").removeClass("vis").addClass("hid");
+					$(".hid:first").removeClass("hid").addClass("vis");
+				}, 500);
+		setTimeout(function (){
+					$(".opasN:first").removeClass("opasN").addClass("opas");
+				}, 550);
+	});
+}
+Slider();
