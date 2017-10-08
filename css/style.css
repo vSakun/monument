@@ -11,7 +11,7 @@ header{
 	background-color: rgba(249,246,246,.7);
 	left: 0px;
 	top: 0px;
-	z-index: 1;
+	z-index: 5;
 }
 header p, footer p{
 	font-family: "BigNoodleTitlingCyr";
@@ -19,6 +19,7 @@ header p, footer p{
 	margin: 0;
 	padding: 0;
 	line-height: 15vh;
+	transition: line-height .3s;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: "BigNoodleTitlingCyr";
@@ -44,6 +45,7 @@ section{
 }
 .mnuTop{
 	height: 15vh;
+	transition: height .3s;
 }
 .contact{
 	width: 100%;
@@ -54,6 +56,7 @@ section{
 	font-size: 2.5rem;
 	letter-spacing: 1px;
 	line-height: 15vh;
+	transition: line-height .3s;
 }
 .contact i{
 	font-size: 2.7rem;
@@ -83,7 +86,7 @@ section{
 	color: #F15324;
 	letter-spacing: 2px;
 	font-size: 2.5rem;
-	height: 15vh;
+	transition: line-height .3s;
 }
 .downPrice i{
 	margin: 0 2% 0 0;
@@ -121,6 +124,102 @@ section{
 	width: 35%;
 	transition: width .5s;
 }
+.descrMenu{
+	text-align: center;
+	position: relative;
+}
+.descrMenu p{
+	letter-spacing: 1px;
+}
+.descrMenu i{
+	margin: 0 5%;
+}
+.descrMenu nav{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 0%;
+	background-color: rgba(249,246,246,.7);
+	border-radius: 0 0 10px 10px;
+	transition: height .5s;
+}
+.descrMenu .heightMax{
+	height: 17vh;
+	transition: height .5s;
+}
+.descrMenu nav a{
+	display: block;
+	position: relative;
+	font-family: "RobotoCon";
+	font-weight: 600;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	color: #8F8383;
+	margin: 1px 0;
+}
+.descrMenu nav a:focus, .descrMenu nav a:hover, .descrMenu nav a:active{
+	text-decoration: none;
+}
+.descrMenu nav a:focus{
+	color: #F15324;
+}
+.descrMenu nav a:hover{
+	color: #F15324;
+}
+.descrMenu nav a::after{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 1px;
+	width: 0;
+	bottom: 0;
+	right: 50%;
+}
+.descrMenu nav a::before{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 1px;
+	width: 0;
+	bottom: 0;
+	left: 50%;
+}
+.descrMenu nav a:hover::after{
+	width: 40%;
+	transition: width .5s;
+}
+.descrMenu nav a:hover::before{
+	width: 40%;
+	transition: width .5s;
+}
+.descrMenu nav a:focus::after{
+	width: 40%;
+	transition: width .5s;
+}
+.descrMenu nav a:focus::before{
+	width: 40%;
+	transition: width .5s;
+}
+#menuBotton .fa-dot-circle-o{
+	color: #F15324;
+}
+body .fix{
+	position: fixed;
+}
+body .fixMnuTop{
+	height: 7vh;
+	transition: height .3s;
+}
+body .fixText{
+	line-height: 7vh;
+	transition: line-height .3s;
+}
+body .fixColor{
+	background-color: rgba(249,206,200, .9);
+}
+/* секция доска */
 #bord span{
 	font-family: "BigNoodleTitlingCyr";
 	text-transform: uppercase;

@@ -1,3 +1,27 @@
+/*Прилипание блока к верхнему краю экрана 
+при прокручивании до него, а так же описание поведения верхнего меню*/
+$(document).ready(function () {
+  var objToStick = $("header"); //Получаем нужный объект
+  var topOfObjToStick = $(objToStick).offset().top; //Получаем начальное расположение нашего блока
+  var allObj = $("header");
+
+  $(window).scroll(function () {
+    var windowScroll = $(window).scrollTop(); //Получаем величину, показывающую на сколько прокручено окно
+
+    if (windowScroll > topOfObjToStick) { // Если прокрутили больше, чем расстояние до блока, то приклеиваем его
+    	$(allObj).addClass("fix fixColor");
+    	$(".descrMenu nav").addClass("fixColor");
+    	$(".mnuTop").addClass("fixMnuTop");
+    	$(".mnuTop p, .mnuTop span, .mnuTop .downPrice a").addClass("fixText");
+    } else {
+    	$(allObj).removeClass("fix fixColor");
+    	$(".descrMenu nav").removeClass("fixColor");
+    	$(".mnuTop").removeClass("fixMnuTop");
+    	$(".mnuTop p, .mnuTop span, .mnuTop .downPrice a").removeClass("fixText");
+    };
+  });
+});
+/*paralax*/
 function heightDetect(){
 	$("#bord").css("height", $(window).height());
 };
@@ -124,25 +148,66 @@ function popup(){
 popup();
 /* Слайдер */
 function Slider(){
-	$(".next").on('click', function(){
-		$(".opas:first").removeClass("opas").addClass("opasN");
+	$("#exampl .next").on('click', function(){
+		$("#exampl .opas:first").removeClass("opas").addClass("opasN");
 		setTimeout(function (){
-					$(".vis:first").removeClass("vis").addClass("hid");
-					$(".hid:last").removeClass("hid").addClass("vis");
-				}, 500);
+			$("#exampl .vis:first").removeClass("vis").addClass("hid");
+			$("#exampl .hid:last").removeClass("hid").addClass("vis");
+		}, 500);
 		setTimeout(function (){
-					$(".opasN:last").removeClass("opasN").addClass("opas");
-				}, 550);
+			$("#exampl .opasN:last").removeClass("opasN").addClass("opas");
+		}, 550);
 	});
-	$(".prev").on('click', function(){
-		$(".opas:last").removeClass("opas").addClass("opasN");
+	$("#exampl .prev").on('click', function(){
+		$("#exampl .opas:last").removeClass("opas").addClass("opasN");
 		setTimeout(function (){
-					$(".vis:last").removeClass("vis").addClass("hid");
-					$(".hid:first").removeClass("hid").addClass("vis");
-				}, 500);
+			$("#exampl .vis:last").removeClass("vis").addClass("hid");
+			$("#exampl .hid:first").removeClass("hid").addClass("vis");
+		}, 500);
 		setTimeout(function (){
-					$(".opasN:first").removeClass("opasN").addClass("opas");
-				}, 550);
+			$("#exampl .opasN:first").removeClass("opasN").addClass("opas");
+		}, 550);
 	});
 }
 Slider();
+/* выпадающее меню*/
+function menuDrop(){
+	$("header #menuBotton").on('click', function(){
+		if($("header nav").hasClass("heightMax") == true){
+			$(".descrMenu nav a").removeClass("opas").addClass("opasN");
+			$("header #menuBotton i:last").removeClass("opas").addClass("opasN");
+			setTimeout(function (){
+				$("nav").removeClass("heightMax");
+				$("header #menuBotton i:last").addClass("hid");
+				$("header #menuBotton i:first").removeClass("hid");
+			}, 200);
+			setTimeout(function (){
+				$("header #menuBotton i:first").addClass("opas").removeClass("opasN");
+			}, 250);
+		}
+		else{
+			$("header nav").addClass("heightMax");
+			$("header #menuBotton i:first").removeClass("opas").addClass("opasN");
+			setTimeout(function (){
+				$("header .descrMenu nav a").addClass("opas").removeClass("opasN");
+				$("header #menuBotton i:first").addClass("hid");
+				$("header #menuBotton i:last").removeClass("hid");
+			}, 200);
+			setTimeout(function (){
+				$("header #menuBotton i:last").addClass("opas").removeClass("opasN");
+			}, 250);
+		}
+	})
+}
+menuDrop();
+/*Переход по якарям*/
+$(document).ready(function(){
+	$('a[href*=#]').bind("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 700);
+		e.preventDefault();
+	});
+	return false;
+});
