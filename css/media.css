@@ -5,7 +5,33 @@
 	
 }
 @media only screen and (max-width : 1200px) {
-	
+	.mnuTop {
+    height: 7vh;
+  }
+	header p, footer p{
+		font-size: 2.5rem;
+		line-height: 7vh;
+	}
+	.contact span{
+		font-size: 1.8rem;
+		line-height: 7vh;
+	}
+	.contact i{
+		font-size: 2rem;
+	}
+	.downPrice i{
+		font-size: 2rem;
+	}
+	.downPrice a{
+		font-size: 2rem;
+		line-height: 7vh;
+	}
+	body .fixText{
+		line-height: 3.4vh;
+	}
+	body .fixMnuTop{
+		height: 3.4vh;
+	}
 }
 @media only screen and (max-width : 1170px) {
 	
@@ -13,16 +39,49 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	html{
-		font-size: 14px;
+	.tel, .mailE{
+		width: 50%;
+	}
+
+
+	.mnuTop {
+    height: 7vh;
+  }
+	header p, footer p{
+		font-size: 2.5rem;
+		line-height: 7vh;
+	}
+	body .contact span{
+		font-size: 1.8rem;
+		line-height: 3.4vh;
+	}
+	.contact i{
+		font-size: 2rem;
+	}
+	.downPrice i{
+		font-size: 2rem;
+	}
+	.downPrice a{
+		font-size: 2rem;
+		line-height: 7vh;
+	}
+	body .fixText{
+		line-height: 7vh;
+	}
+	body .fixMnuTop{
+		height: 7vh;
+	}
+	strong{
+		display: none;
+	}
+	.downPrice i{
+		font-size: 3rem;
 	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	html{
-		font-size: 12px;
-	}
+	
 
 	/*Disable Animation on Mobile Devices*/
 	.animated {
@@ -48,38 +107,16 @@
 
 }
 @media only screen and (max-width : 618px) {
-	html{
-		font-size: 10px;
+	.title h1{
+		font-size: 3rem;
 	}
 }
 @media only screen and (max-width : 495px) {
-	html{
-		font-size: 10px;
-	}
-	h1{
-		font-size: 25px;
-	}
-	h2{
-		font-size: 20px;
-	}
-	h2 span{
-		font-size: 63px;
-	}
-	h3{
-		font-size: 2rem;
-	}
-
+	
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 360px) {
-	h1{
-		font-size: 20px;
-	}
-	h2{
-		font-size: 15px;
-	}
-	h2 span{
-		font-size: 58px;
+
 }
 @media only screen and (max-width : 320px) {
 	

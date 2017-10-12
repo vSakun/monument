@@ -39,6 +39,9 @@ section{
 	letter-spacing: 3px;
 	color: #D7D6D6;
 }
+html strong{
+	font-weight: lighter;
+}
 #bord{
 	position: relative;
 	min-height: 200px;
@@ -144,7 +147,7 @@ section{
 	transition: height .5s;
 }
 .descrMenu .heightMax{
-	height: 17vh;
+	height: 110px;
 	transition: height .5s;
 }
 .descrMenu nav a{
