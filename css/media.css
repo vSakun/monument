@@ -13,24 +13,24 @@
 		line-height: 7vh;
 	}
 	.contact span{
-		font-size: 1.8rem;
+		font-size: 2rem;
 		line-height: 7vh;
 	}
 	.contact i{
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 	.downPrice i{
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 	.downPrice a{
 		font-size: 2rem;
 		line-height: 7vh;
 	}
 	body .fixText{
-		line-height: 3.4vh;
+		line-height: 3.5vh;
 	}
 	body .fixMnuTop{
-		height: 3.4vh;
+		height: 3.5vh;
 	}
 }
 @media only screen and (max-width : 1170px) {
@@ -39,50 +39,85 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	.tel, .mailE{
-		width: 50%;
-	}
-
-
 	.mnuTop {
-    height: 7vh;
+    height: 5vh;
   }
 	header p, footer p{
 		font-size: 2.5rem;
-		line-height: 7vh;
+		line-height: 5vh;
 	}
-	body .contact span{
-		font-size: 1.8rem;
-		line-height: 3.4vh;
+	.downPrice a{
+		font-size: 2rem;
+		line-height: 5vh;
+	}
+	.contact span{
+		font-size: 2rem;
+		line-height: 5vh;
+	}
+	body .fixText{
+		line-height: 3vh;
+	}
+	body .fixMnuTop{
+		height: 3vh;
+	}
+	strong{
+		display: none;
+	}
+	body .fixText .downPrice i, body .fixText .descrMenu i{
+		font-size: 3rem;
+		line-height: 3vh;
+	}
+	.descrMenu nav{
+		left: -40px;
+		width: 110px;
+	}
+	.descrMenu .heightMax{
+		width: 110px;
+	}
+}
+
+@media only screen and (max-width : 810px) {
+	.descrMenu nav{
+		left: -75px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.mnuTop {
+    height: 6vh;
+  }
+	header p, footer p{
+		font-size: 2.5rem;
+		line-height: 6vh;
+	}
+	.contact span{
+		font-size: 2rem;
+		line-height: 3vh;
 	}
 	.contact i{
 		font-size: 2rem;
 	}
 	.downPrice i{
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 	.downPrice a{
 		font-size: 2rem;
-		line-height: 7vh;
+		line-height: 6vh;
 	}
 	body .fixText{
-		line-height: 7vh;
+		line-height: 3vh;
 	}
 	body .fixMnuTop{
-		height: 7vh;
+		height: 3vh;
 	}
-	strong{
-		display: none;
-	}
-	.downPrice i{
+	body .fixText .downPrice i, body .fixText .descrMenu i{
 		font-size: 3rem;
+		line-height: 3vh;
 	}
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-	
-
+	.descrMenu nav{
+		left: -40px;
+		width: 110px;
+	}
 	/*Disable Animation on Mobile Devices*/
 	.animated {
 		CSS transitions
