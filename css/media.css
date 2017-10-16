@@ -6,8 +6,8 @@
 }
 @media only screen and (max-width : 1200px) {
 	.mnuTop {
-    height: 7vh;
-  }
+		height: 7vh;
+	}
 	header p, footer p{
 		font-size: 2.5rem;
 		line-height: 7vh;
@@ -40,8 +40,8 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.mnuTop {
-    height: 5vh;
-  }
+		height: 5vh;
+	}
 	header p, footer p{
 		font-size: 2.5rem;
 		line-height: 5vh;
@@ -84,15 +84,15 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	.mnuTop {
-    height: 6vh;
-  }
+		height: 6vh;
+	}
 	header p, footer p{
 		font-size: 2.5rem;
 		line-height: 6vh;
 	}
 	.contact span{
 		font-size: 2rem;
-		line-height: 3vh;
+		line-height: 6vh;
 	}
 	.contact i{
 		font-size: 2rem;
@@ -114,9 +114,8 @@
 		font-size: 3rem;
 		line-height: 3vh;
 	}
-	.descrMenu nav{
-		left: -40px;
-		width: 110px;
+	#conect .subBot{
+		font-size: 1.4rem;
 	}
 	/*Disable Animation on Mobile Devices*/
 	.animated {
@@ -141,17 +140,79 @@
 	}
 
 }
-@media only screen and (max-width : 618px) {
-	.title h1{
-		font-size: 3rem;
+@media only screen and (max-width : 635px) {
+	
+	.tel, .mailE{
+		width: 100%;
+	}
+	.varP .opisBlok p,.varP .opisBlok span{
+		font-size: 1.5rem;
+	}
+	.mnuTop .col-xs-1{
+		margin: 0;
+		padding: 0;
+	}
+	.descrMenu .heightMax{
+		border-radius: 10px;
+		background-color: #ffffff;
+		box-shadow: 0 0 10px 0 #000000;
+	}
+	.wrapVarP .more{
+		font-size: 1.7rem;
+	}
+	#conect .subBot{
+		width: 25%;
 	}
 }
 @media only screen and (max-width : 495px) {
-	
+	.title h1{
+		font-size: 3rem;
+	}
+	#bord .title span{
+		font-size: 2.5rem;
+	}
+	header p, footer p{
+		font-size: 2rem;
+	}
+	.contact span{
+		font-size: 1.6rem;
+	}
+	.contact i{
+		font-size: 1.6rem;
+	}
+	.downPrice i{
+		font-size: 2rem;
+	}
+	.downPrice a{
+		font-size: 1.5rem;
+	}
+	body .fixText .downPrice i, body .fixText .descrMenu i{
+		font-size: 2.5rem;
+	}
+	.titleSection p{
+		font-size: 1.3rem;
+	}
+	.titleSection h2{
+		font-size: 2.3rem;
+	}
+	.rowSlide .prev, .rowSlide .next{
+		padding: 0;
+		margin: 0;
+	}
+	.prev i, .next i{
+		font-size: 3rem;
+		padding-top: 50%;
+	}
+	.varP h4{
+		font-size: 1.5rem;
+	}
+	.varP .opisBlok p, .varP .opisBlok span{
+		font-size: 1.188888888rem;
+	}
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 360px) {
-
+	
 }
 @media only screen and (max-width : 320px) {
 	
