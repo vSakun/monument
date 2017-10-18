@@ -163,6 +163,9 @@
 	#conect .subBot{
 		width: 25%;
 	}
+	.mnuFoot{
+	height: 7vh;
+}
 }
 @media only screen and (max-width : 495px) {
 	.title h1{
