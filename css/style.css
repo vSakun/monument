@@ -13,6 +13,9 @@ header{
 	top: 0px;
 	z-index: 5;
 }
+a:focus{
+	text-decoration: none;
+}
 header p, footer p{
 	font-family: "BigNoodleTitlingCyr";
 	font-size: 3.33rem;
@@ -30,6 +33,53 @@ h1,h2,h3,h4,h5,h6{
 }
 section{
 	padding: 2% 0;
+}
+.nameSite{
+	font-family: "BigNoodleTitlingCyr";
+	font-size: 3.33rem;
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	line-height: 15vh;
+	transition: color .5s, line-height .3s, text-shadow .5s;
+}
+.nameSite:active, .nameSite:focus{
+	text-decoration: none;
+	color: #000000;
+}
+.nameSite:hover{
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: 0 0 3px #000000;
+	transition: color .5s, text-shadow .5s;
+}
+.nameSite::after{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	right: 50%;
+}
+.nameSite::before{
+	content: "";
+	position: absolute;
+	transition: width .5s;
+	background-color: #F15324;
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	left: 50%;
+}
+.nameSite:hover::after{
+	width: 45%;
+	transition: width .5s;
+}
+.nameSite:hover::before{
+	width: 45%;
+	transition: width .5s;
 }
 /* Заглавная секция */
 .title h1{
@@ -139,6 +189,7 @@ html strong{
 }
 .descrMenu p{
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 .descrMenu i{
 	margin: 0 5%;

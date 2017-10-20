@@ -12,12 +12,12 @@ $(document).ready(function () {
     	$(allObj).addClass("fix fixColor");
     	$(".descrMenu nav").addClass("fixColor");
     	$(".mnuTop").addClass("fixMnuTop");
-    	$(".mnuTop p, .mnuTop span, .mnuTop .downPrice a").addClass("fixText");
+    	$(".mnuTop p, .nameSite, .mnuTop span, .mnuTop .downPrice a").addClass("fixText");
     } else {
     	$(allObj).removeClass("fix fixColor");
     	$(".descrMenu nav").removeClass("fixColor");
     	$(".mnuTop").removeClass("fixMnuTop");
-    	$(".mnuTop p, .mnuTop span, .mnuTop .downPrice a").removeClass("fixText");
+    	$(".mnuTop p, .nameSite, .mnuTop span, .mnuTop .downPrice a").removeClass("fixText");
     };
   });
 });
@@ -211,3 +211,8 @@ $(document).ready(function(){
 	});
 	return false;
 });
+/* Анимация */
+$(".animation_1").animated("slideInDown", "slideOutUp");
+$(".animation_2").animated("flipInX", "flipOutX");
+$(".animation_3").animated("slideInLeft", "slideOutRight");
+$(".animation_4").animated("slideInRight", "slideOutLeft");

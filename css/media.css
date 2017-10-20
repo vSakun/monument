@@ -26,6 +26,10 @@
 		font-size: 2rem;
 		line-height: 7vh;
 	}
+	.nameSite{
+		font-size: 2rem;
+		line-height: 7vh;
+	}
 	body .fixText{
 		line-height: 3.5vh;
 	}
@@ -47,6 +51,10 @@
 		line-height: 5vh;
 	}
 	.downPrice a{
+		font-size: 2rem;
+		line-height: 5vh;
+	}
+	.nameSite{
 		font-size: 2rem;
 		line-height: 5vh;
 	}
@@ -101,6 +109,10 @@
 		font-size: 2.5rem;
 	}
 	.downPrice a{
+		font-size: 2rem;
+		line-height: 6vh;
+	}
+	.nameSite{
 		font-size: 2rem;
 		line-height: 6vh;
 	}
@@ -165,7 +177,7 @@
 	}
 	.mnuFoot{
 	height: 7vh;
-}
+	}
 }
 @media only screen and (max-width : 495px) {
 	.title h1{
@@ -187,6 +199,9 @@
 		font-size: 2rem;
 	}
 	.downPrice a{
+		font-size: 1.5rem;
+	}
+	.nameSite{
 		font-size: 1.5rem;
 	}
 	body .fixText .downPrice i, body .fixText .descrMenu i{
