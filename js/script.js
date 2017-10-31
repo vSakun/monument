@@ -172,7 +172,7 @@ function Slider(){
 Slider();
 /* выпадающее меню*/
 function menuDrop(){
-	$("header #menuBotton").on('click', function(){
+	$("header .descrMenu").hover( function(){
 		if($("header nav").hasClass("heightMax") == true){
 			$(".descrMenu nav a").removeClass("opas").addClass("opasN");
 			$("header #menuBotton i:last").removeClass("opas").addClass("opasN");
@@ -184,9 +184,15 @@ function menuDrop(){
 			setTimeout(function (){
 				$("header #menuBotton i:first").addClass("opas").removeClass("opasN");
 			}, 250);
+			setTimeout(function (){
+				$("header nav").addClass("hid");
+			}, 600);
 		}
 		else{
-			$("header nav").addClass("heightMax");
+			$("header nav").removeClass("hid");
+			setTimeout(function (){
+				$("header nav").addClass("heightMax");
+			}, 100);
 			$("header #menuBotton i:first").removeClass("opas").addClass("opasN");
 			setTimeout(function (){
 				$("header .descrMenu nav a").addClass("opas").removeClass("opasN");
