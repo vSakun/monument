@@ -220,5 +220,3 @@ $(document).ready(function(){
 /* Анимация */
 $(".animation_1").animated("slideInDown", "slideOutUp");
 $(".animation_2").animated("flipInX", "flipOutX");
-$(".animation_3").animated("slideInLeft", "slideOutRight");
-$(".animation_4").animated("slideInRight", "slideOutLeft");
